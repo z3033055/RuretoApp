@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <!-- Google マップの表示エリア -->
+    <fragment
+        android:id="@+id/mapFragment"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_alignParentBottom="true"/>
+
+    <!-- お店の名前を入力 -->
+    <EditText
+        android:id="@+id/editTextStore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="お店の名前または住所を入力"
+        android:layout_alignParentTop="true"/>
+
+    <!-- 追加ボタン -->
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="お店を追加"
+        android:layout_below="@id/editTextStore"/>
+
+    <!-- お店リスト -->
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_below="@id/btnAdd"
+        android:divider="@android:color/darker_gray"
+        android:dividerHeight="1dp"/>
+
+    <!-- ルーレットボタン -->
+    <Button
+        android:id="@+id/btnRoulette"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ルーレット開始"
+        android:layout_below="@id/listView"/>
+
+</RelativeLayout>
